@@ -1,0 +1,60 @@
+<!-- kitchen.component.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-accordion-group *ngIf="orders | async as orderData">
+    <!-- Boucle sur l'ensemble des commandes pour créer un ion-accordion pour chaque commande -->
+    <ion-accordion *ngFor="let order  of orderData; trackBy:trackItems  ; let i = index" value="{{order.id}}">
+      <ion-item slot="header" color="light">
+        <ion-label>
+          <ion-icon *ngIf="order.status === 'cancelled'" src="../../assets/cross.svg"><ion-text>CANCEL</ion-text></ion-icon>
+          <ion-icon *ngIf="order.status === 'finished'" src="../../assets/valid.svg"> </ion-icon>
+          -- Order #{{ i + 1 }} - {{ formatDate(order.timestamp) }}
+          <p *ngIf="order.status === 'started'">en cours</p>
+          <p *ngIf="order.status === 'pending'">en attente</p>
+          <p *ngIf="order.status === 'cancelled'">CANCEL</p>
+          <p *ngIf="order.status === 'finished'">FINISH</p>
+
+
+        </ion-label>
+      </ion-item>
+      <div slot="content">
+
+        <ion-button color="primary" (click)="updateOrderStart(order.id)"
+        [disabled]="order.status === 'started' || order.status === 'finished' || order.status === 'cancelled'">Start</ion-button>
+      
+      <ion-button (click)="updateOrderFinish(order.id)" color="success"
+        [disabled]="order.status === 'pending' || order.status === 'finished' || order.status === 'cancelled'">
+        Finish
+        <ion-icon src="../../assets/valid.svg"> </ion-icon>
+      </ion-button>
+      
+      <ion-button color="danger" (click)="updateOrderCancel(order.id)"
+        [disabled]="order.status === 'finished' || order.status === 'cancelled'">
+        Cancel
+        <ion-icon src="../../assets/cross.svg"></ion-icon>
+      </ion-button>
+      
+        <!-- Boucle sur chaque élément de la commande spécifique -->
+        <ion-list>
+          <ion-item *ngFor="let item of order.order">
+
+            <ion-avatar>
+              <img [src]="item.recipe?.imageUrl" alt="{{ item.recipe?.title }}">
+            </ion-avatar>
+            <div class="ion-padding">
+              <p>{{ item.recipe?.title }} - Qty: {{ item.quantity }} x</p>
+
+            </div>
+          </ion-item>
+        </ion-list>
+
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <a routerLink="/home">Home</a>
+</ion-content>

@@ -1,0 +1,38 @@
+h2.title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+ion-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+ion-grid.ion-grid-right{
+    ion-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    padding: 30px;
+    
+}
+}
+
+
+ion-text p{
+    text-align: justify;
+}
+
+
+:host {
+    ion-toolbar {
+        --background: var(--ion-color-primary) ;
+}
+}
+

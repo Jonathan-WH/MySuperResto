@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resume</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="modalectrl.dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+  <ion-item *ngFor="let item of order">
+    <ion-avatar >
+    <img [src]="item?.recipe?.imageUrl" alt="">
+    </ion-avatar>
+    <ion-label><p> {{item?.recipe?.title}} - {{(item?.recipe?.price || 0)  / 100 | currency:'CHF':'symbol-narrow':'1.2-2'}} (Qty: {{item.quantity}})</p></ion-label>
+  </ion-item>
+</ion-list>
+<ion-button  
+size="small"
+expand="block"
+fill="outline"
+(click)="sendOrder();modalectrl.dismiss()"
+> 
+Order Now for
+{{ order || [] | totalCartPrice | currency:'CHF ':'symbol':'1.2-2' }}
+ </ion-button>
+</ion-content>
