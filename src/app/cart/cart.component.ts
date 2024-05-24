@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TotalCartPricePipe } from '../Pipe/total-cart-price/total-cart-price.pipe';
 import { RemovefromcartService } from '../service/addremovefromcart.service';
 import { Observable, firstValueFrom } from 'rxjs';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController, IonButton, IonList, IonItem, IonAvatar, IonLabel } from '@ionic/angular/standalone';
 import { AnimationController } from '@ionic/angular/standalone';
 import { ListmodalComponent } from '../listmodal/listmodal.component';
 
@@ -15,7 +15,7 @@ import { ListmodalComponent } from '../listmodal/listmodal.component';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
   standalone: true,
-  imports: [CommonModule, TotalCartPricePipe, IonicModule, ListmodalComponent]
+  imports: [CommonModule, TotalCartPricePipe, ListmodalComponent, IonButton, IonList, IonItem, IonAvatar, IonLabel],
 })
 export class CartComponent {
   
