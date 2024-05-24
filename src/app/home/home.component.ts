@@ -10,7 +10,7 @@ import { CartComponent } from '../cart/cart.component';
 import { TotalCartPricePipe } from '../Pipe/total-cart-price/total-cart-price.pipe';
 import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ApiService } from '../service/api.service';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RemovefromcartService } from '../service/addremovefromcart.service';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -37,26 +37,23 @@ export interface Category {
   recipes: Recipe[];
 }
 
-@Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    CommonModule,
-    FooterComponent,
-    FilterByCategoryPipe,
-    CartComponent,
-    TotalCartPricePipe,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule,
-    IonicModule,
-    SplashScreenComponent
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+@Component({ selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss', imports: [RouterOutlet,
+        HeaderComponent,
+        CommonModule,
+        FooterComponent,
+        FilterByCategoryPipe,
+        CartComponent,
+        TotalCartPricePipe,
+        ReactiveFormsModule,
+        RouterModule,
+        IonicModule,
+        SplashScreenComponent], 
+        providers: [] 
 })
+
 export class HomeComponent {
   title!: string; //= database.title;
   categories!: Category[] //= database.data;
