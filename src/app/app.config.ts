@@ -30,7 +30,7 @@ export const appConfig: ApplicationConfig = {
                     database: dataResolver
                 },
             },
-            { path: 'kitchen', component: KitchenComponent, canActivate: [isAuthGuard] },
+            { path: 'kitchen', component: KitchenComponent},
             { path: 'login', component: LoginPageComponent },
             { path: '', redirectTo: '/home', pathMatch: 'full' },
             { path: '404', component: NotFoundPageComponent },
