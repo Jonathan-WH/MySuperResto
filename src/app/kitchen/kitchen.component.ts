@@ -1,13 +1,12 @@
 // kitchen.component.ts
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../service/order.service';
-import { IonicModule } from '@ionic/angular';
+import { IonContent, IonGrid, IonRow, IonCol, IonHeader, IonToolbar, IonTitle, IonItem, IonLabel, IonAvatar, IonText, IonNote, IonButton, IonToast, IonAccordionGroup, IonAccordion, IonIcon, IonList } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
 import { Observable } from 'rxjs';
 import { DatePipe } from '@angular/common';
-import { IonIcon } from '@ionic/angular/standalone';
 import { TriOrderTimePipe } from '../Pipe/tri-order-time/tri-order-time.pipe';
 import { of } from 'rxjs';
 import { Recipe } from '../home/home.component';
@@ -22,7 +21,7 @@ export interface Order {
 @Component({
   selector: 'app-kitchen',
   standalone: true,
-  imports: [IonicModule, CommonModule, RouterLink, SplashScreenComponent, TriOrderTimePipe],
+  imports: [CommonModule, RouterLink, SplashScreenComponent, TriOrderTimePipe, IonContent, IonGrid, IonRow, IonCol, IonHeader, IonToolbar, IonTitle, IonItem, IonLabel, IonAvatar, IonText, IonNote, IonButton, IonToast, IonAccordionGroup, IonAccordion, IonIcon, IonList],
 
   templateUrl: './kitchen.component.html',
   styleUrls: ['./kitchen.component.scss'],

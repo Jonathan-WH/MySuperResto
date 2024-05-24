@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonContent, IonGrid, IonRow, IonCol, IonHeader, IonToolbar, IonTitle, IonItem, IonLabel, IonAvatar, IonText, IonNote, IonButton, IonToast, IonAccordionGroup, IonAccordion, IonIcon, IonList, IonButtons } from '@ionic/angular/standalone';
 import { TotalCartPricePipe } from '../Pipe/total-cart-price/total-cart-price.pipe';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -15,7 +15,7 @@ import { OrderService } from '../service/order.service';
   templateUrl: './listmodal.component.html',
   styleUrls: ['./listmodal.component.scss'],
   standalone: true,
-  imports: [IonicModule, TotalCartPricePipe, CommonModule, CartComponent]
+  imports: [ TotalCartPricePipe, CommonModule, CartComponent, IonContent, IonGrid, IonRow, IonCol, IonHeader, IonToolbar, IonTitle, IonItem, IonLabel, IonAvatar, IonText, IonNote, IonButton, IonToast, IonAccordionGroup, IonAccordion, IonIcon, IonList, IonButtons]
 })
 export class ListmodalComponent  implements OnInit {
   @Input() order?:{ quantity?: number, recipe?: Partial<Recipe> }[];

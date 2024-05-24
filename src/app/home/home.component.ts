@@ -14,7 +14,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { RemovefromcartService } from '../service/addremovefromcart.service';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import {  IonContent, IonGrid, IonRow, IonCol, IonHeader, IonToolbar, IonTitle, IonItem, IonLabel, IonAvatar, IonText, IonNote, IonButton, IonToast} from '@ionic/angular/standalone';
 import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
 
 
@@ -49,8 +49,21 @@ export interface Category {
         TotalCartPricePipe,
         ReactiveFormsModule,
         RouterModule,
-        IonicModule,
-        SplashScreenComponent], 
+        SplashScreenComponent,
+        IonContent,
+        IonGrid,
+        IonRow,
+        IonCol,
+        IonHeader,
+        IonToolbar,
+        IonTitle,
+        IonItem,
+        IonLabel,
+        IonAvatar,
+          IonText,
+          IonNote,
+          IonButton,
+          IonToast], 
         providers: [] 
 })
 
