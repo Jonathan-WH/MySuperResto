@@ -2,7 +2,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { KitchenComponent } from './kitchen/kitchen.component';
-import { IonicModule } from '@ionic/angular';
+import { IonApp, IonRouterOutlet  } from '@ionic/angular/standalone';
 import '@khmyznikov/pwa-install'
 
 @Component({
@@ -13,7 +13,9 @@ import '@khmyznikov/pwa-install'
     RouterOutlet,
     HomeComponent,
     KitchenComponent,
-    IonicModule
+    IonApp,
+    IonRouterOutlet
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
