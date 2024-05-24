@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1716542810181,
+  "timestamp": 1716544524826,
   "index": "/MySuperResto/index.html",
   "assetGroups": [
     {
@@ -41,7 +41,7 @@
         "/MySuperResto/chunk-Z5HBCMI3.js",
         "/MySuperResto/favicon.ico",
         "/MySuperResto/index.html",
-        "/MySuperResto/main-NMT2EV73.js",
+        "/MySuperResto/main-F6P6OGFN.js",
         "/MySuperResto/manifest.webmanifest",
         "/MySuperResto/polyfills-RT5I6R6G.js",
         "/MySuperResto/styles-OJQM2ZXE.css"
@@ -140,8 +140,8 @@
     "/MySuperResto/chunk-YET6W2RT.js": "5a4f9b4ea097ee859211571183e38b1f97fe8caf",
     "/MySuperResto/chunk-Z5HBCMI3.js": "966dffd6f8d158a9a2e1c52aa8769670b893f777",
     "/MySuperResto/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/MySuperResto/index.html": "5680245db3949f953b15f68586ec3438cae4161e",
-    "/MySuperResto/main-NMT2EV73.js": "94935adb81a62d39346ac6ca32e4f0d5b58001ee",
+    "/MySuperResto/index.html": "77eae430f2fa66a14c837870e966ab878d05eb95",
+    "/MySuperResto/main-F6P6OGFN.js": "104715824cc6650163a569d8c298fecd9bfc8c1d",
     "/MySuperResto/manifest.webmanifest": "eb2cef9838b73da8502f5eb6f2182e8673f8ad8f",
     "/MySuperResto/polyfills-RT5I6R6G.js": "fe9f024576f21ff6314cf8f8332cde58b9a12416",
     "/MySuperResto/styles-OJQM2ZXE.css": "7a58328c936116832be61b9ce786882527be51ba"
